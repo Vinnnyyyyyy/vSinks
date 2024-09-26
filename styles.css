@@ -10,6 +10,32 @@ body {
     padding: 20px;
 }
 
+.sidebar {
+    background-color: #333333;
+    padding: 15px;
+    color: white;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     margin: 0;
 }
