@@ -8,14 +8,15 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
     background-color: #cccccc;
     text-align: center;
     padding: 20px;
+    width: 100%;
 }
 
 .sidebar {
@@ -25,6 +26,9 @@ body {
     width: 20%;
     height: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .sidebar ul {
@@ -50,6 +54,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    width: 78%;
 }
 
 .product, .product-full {
@@ -65,4 +70,64 @@ body {
 .product img, .product-full img {
     max-width: 100%;
     height: auto;
+}
+
+.footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .product, .product-full {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .content {
+        margin-left: 26%;
+        width: 74%;
+    }
+
+    .product, .product-full {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (min-width: 1201px) {
+    .sidebar {
+        width: 20%;
+    }
+
+    .content {
+        margin-left: 22%;
+        width: 78%;
+    }
+
+    .product, .product-full {
+        flex: 1 1 calc(50% - 40px);
+    }
 }
